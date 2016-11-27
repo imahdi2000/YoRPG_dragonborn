@@ -13,21 +13,27 @@ public class Mage extends Character{
 	defense = 115;
 	attack = .4;
     }
+
+    public String getType(){
+	return "Mage";
+    }
+    
     public Mage(String n){
 	this();
 	name = n;
     }
     public void normalize(){
 	while (count > 0){//funtion returns stat back to the original base stat
-	    defense = defense + 10;
-	    attack = attack - .5;
+	    defense = defense + 100;
+	    // attack = attack - .5;
 	    count -= 1;//decreases the counter
 	}
     }
     public void specialize(){
+	System.out.println("Thou hast cast a fireball to burn the Monster!");	
 	count += 1;//counter increaes by 1
-	defense = defense - 10; 
-	attack = attack + .5;	
+	defense = defense - 100; 
+	//	attack = attack + .5;	
     }
     public String about(){
 	return "Mage - Pew Pew Zap - (Life = 110  Defense = 35  Attack = .4 Strength = 75)";
@@ -37,7 +43,7 @@ public class Mage extends Character{
 	s += "YOUR A WIZARD!!!\n";
 	s +="o \n";
 	s +="                   O       /`-._\n";
-	s +="                          /  ^·'^|\n";
+	s +="                          /  ^Â·'^|\n";
 	s +="             o           T    l  *\n";
 	s +="                        _|-..-|_\n";
 	s +="                 O    (^ '----' `)\n";
@@ -62,7 +68,7 @@ public class Mage extends Character{
 	s +="         .-'|                        |    `-.\n";
 	s +="   _.--'`   ^                        /       `-.\n";
 	s +="  /          ^                      /           `-._\n";
-	s +="  `'---..__   `.                  .´_.._   __       ^\n";
+	s +="  `'---..__   `.                  .Â´_.._   __       ^\n";
 	s +="           ``'''`.              .'gnv   `'^  `''---'^\n";
 	s +="                  `-..______..-'\n";
 	return s;
