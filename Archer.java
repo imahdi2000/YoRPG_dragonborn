@@ -15,6 +15,10 @@ public class Archer extends Character{
 	defense = 20;
 	attack = 0.5;
     }
+	
+    public String getType(){
+	return "Archer";
+    }
 
     public Archer(String n){
 	this();//calls default constructor
