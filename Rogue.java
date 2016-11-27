@@ -7,6 +7,10 @@ HW 35 -- Ye Olde Role Playing Game, Realized
 public class Rogue extends Character{
 
     private String name;
+
+    public String getType(){
+	return "Rogue";
+    }
     
     public Rogue(){
 	name = "unknown";
@@ -22,15 +26,16 @@ public class Rogue extends Character{
     }
         public void normalize(){
 	while (count > 0){//funtion returns stat back to the original base stat
-	    defense = defense + 10;
-	    attack = attack - .5;
+	    defense = defense + 5;
+	    //   attack = attack - .5;
 	    count -= 1;//decreases the counter
 	}
     }
     public void specialize(){
+	System.out.println("Thou hast used thy stealth to disarm the Monster!");	
 	count += 1;//counter increaes by 1
-	defense = defense - 10; 
-	attack = attack + .5;	
+	defense = defense - 5; 
+	//	attack = attack + .5;	
     }
     public  String about(){
 	return "Rouge - The wild card- (Life = 100 Strength = 130 Defense = 5 Att = .45) ";
