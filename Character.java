@@ -66,6 +66,7 @@ public abstract class Character{
     public abstract String about();
     public abstract void normalize();
     public abstract void specialize();
+    public abstract String getType();	
     public abstract String graphics();
 
 
