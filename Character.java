@@ -26,6 +26,12 @@ public abstract class Character{
     public void lowerHP(int a){
 	life -= a;
     }
+    
+    public void directEffect(int damage, double powerLoss){//this lets the effects of the specialized attacks get to the monster
+	life = life - damage;
+	attack = attack - powerLoss;
+    }
+    
     public int attack(Character a){
 	int damage;
 	damage = (int)((strength * attack) - a.getDefense());//trunkates to int
@@ -57,9 +63,9 @@ public abstract class Character{
 	ndefense = Integer.toString(defense);
 	return "Heath: "+nlife+"  Defense:  "+ ndefense+"\n"; 
     }
-    public  abstract  String about();
+    public abstract String about();
     public abstract void normalize();
-    public abstract  void specialize();
+    public abstract void specialize();
     public abstract String graphics();
 
 
