@@ -7,6 +7,10 @@ HW 35 -- Ye Olde Role Playing Game, Realized
 public class Coder extends Character{
 
     private String name;
+
+    public String getType(){
+	return "Coder";
+    }
     
     public Coder(){
 	name = "unknown";
@@ -22,14 +26,15 @@ public class Coder extends Character{
     }
         public void normalize(){
 	while (count > 0){//funtion returns stat back to the original base stat
-	    defense = defense + 10;
+	    defense = defense + 900;
 	    attack = attack - .5;
 	    count -= 1;//decreases the counter
 	}
     }
     public void specialize(){
+	System.out.println("Thou hast used a special attack!");	
 	count += 1;//counter increaes by 1
-	defense = defense - 10; 
+	defense = defense - 900; 
 	attack = attack + .5;	
     }
     public  String about(){
