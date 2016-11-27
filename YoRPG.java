@@ -30,7 +30,17 @@ public class YoRPG
     String name = "";
     private InputStreamReader isr;
     private BufferedReader in;
+
+    //these variables describe the condition of the monster. They will be called by specialize() 
+    
+    public boolean onFire = false;
+    public boolean poisoned = false;
+    public boolean dizzy = false;
+    public boolean disarmed = false;
+    
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    
 
 
     // ~~~~~~~~~~ DEFAULT CONSTRUCTOR ~~~~~~~~~~~
@@ -138,19 +148,45 @@ public class YoRPG
 		}
 		catch ( IOException e ) { }
 
-		if ( i == 2 )
+		if ( i == 2 ){
 		    pat.specialize();
-		else
+		    if ((pat.getType()).equals("Archer")) poisoned = true;
+		    if ((pat.getType()).equals("Mage")) onFire = true;
+		    if ((pat.getType()).equals("Warrior")) dizzy = true;
+		    if ((pat.getType()).equals("Rogue")) disarmed = true;
+		}
+		else{
 		    pat.normalize();
+		}
 
 		d1 = pat.attack( smaug );
 		d2 = smaug.attack( pat );
 
-		System.out.println( "\n" + name + " dealt " + d1 +
-				    " points of damage.");
+		System.out.println( "\n" + name + " dealt " + d1 + " points of damage.");
+//
+		if (poisoned == true){
+		    smaug.directEffect(10, 0.0);
+		    System.out.println("Ye olde Monster's weakened by the poison that courses through its blood, losing 10 health in its sickness.");
+		    poisoned = false;
+		}
+		if (onFire == true){
+		    smaug.directEffect(20, -0.2);
+		    System.out.println("Ye olde Monster's still burning, losing 20 health in its agony. Alas, ye Monster has struck thou hard in its rage.");
+		    onFire = false;
+		}
+		if (dizzy == true){
+		    smaug.directEffect(0, 0.4);
+		    System.out.println("Ye olde Monster's skull still rings with the power of your blow. Its power is reduced.");
+		    dizzy = false;
+		}
+		if (disarmed == true){
+		    smaug.directEffect(0, 0.4);
+		    System.out.println("Ye olde Monster's without a weapon. Its power is reduced.");
+		    disarmed = false; 
+		}
+//
+		System.out.println( "\n" + "Ye Olde Monster smacked " + name + " for " + d2 + " points of damage.");
 
-		System.out.println( "\n" + "Ye Olde Monster smacked " + name +
-				    " for " + d2 + " points of damage.");
 	    }//end while
 
 	    //option 1: you & the monster perish
@@ -200,5 +236,3 @@ public class YoRPG
     }//end main
 
 }//end class YoRPG
-
-
