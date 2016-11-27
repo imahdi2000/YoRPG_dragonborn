@@ -5,7 +5,13 @@ HW 35 -- Ye Olde Role Playing Game, Realized
 */
 
 public class Warrior extends Character{
+    
     private String name;
+
+    public String getType(){
+	return "Warrior";
+    }
+    
     public Warrior(){
 
 	name = "unknown";//needed to set name to somthing
@@ -26,6 +32,7 @@ public class Warrior extends Character{
 	}
     }
     public void specialize(){
+	System.out.println("Thou hast knocked the smarts out of the Monster for a brief moment!");	
 	count += 1;//counter increaes by 1
 	defense = defense - 10; 
 	attack = attack + .5;	
