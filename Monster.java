@@ -11,12 +11,17 @@ public class Monster extends Character{
 	defense = 0;
 	attack = 1;
     }
-        public void normalize(){
-
+    
+    public void normalize(){
     }
+    
     public void specialize(){
-
     }
+    
+    public String getType(){
+	return "Monster";
+    }
+    
     public  String about(){
 	return "Monster - is the enemey, nuff said - (Life = 150  Defense = 20  Attack = 1 Strength = random[45,60))";
     }
