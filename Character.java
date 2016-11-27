@@ -66,7 +66,7 @@ public abstract class Character{
     public abstract String about();
     public abstract void normalize();
     public abstract void specialize();
-    public abstract String getType();	
+    public abstract String getType(); //lets you get the type of the character so driver can recognize the class of pat or smaug	
     public abstract String graphics();
 
 
