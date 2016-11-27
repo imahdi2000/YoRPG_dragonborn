@@ -1,7 +1,7 @@
 /* Ishtiaque Mahdi, Allard Peng, David Frid (Team DragonBorns)
 APCS1 pd 3
-HW 32 -- Ye Olde Role Playing Game, Expanded
-2016 - 11 - 20
+HW 35 -- Ye Olde Role Playing Game, Realized
+2016 - 11 - 27
 */
 
 /*=============================================
@@ -27,7 +27,7 @@ public class YoRPG
     private int moveCount;
     private boolean gameOver;
     private int difficulty;
-
+    String name = "";
     private InputStreamReader isr;
     private BufferedReader in;
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -55,11 +55,9 @@ public class YoRPG
       =============================================*/
     public void newGame()
     {
-	String s;
-	String name = "";
-	String choice = "1";
-	s = "~~~ Welcome to Ye Olde RPG! ~~~\n";
+	String s ="";
 
+	String choice = "1";
 	s += "\nChoose your difficulty: \n";
 	s += "\t1: Easy\n";
 	s += "\t2: Not so easy\n";
@@ -79,7 +77,7 @@ public class YoRPG
 	    name = in.readLine();
 	}
 	catch ( IOException e ) { }
-	System.out.print("\nChoose your class: Type 1 for Warrior \nType 2 for Mage\nType 3 for Archer\nType 4 for Rogue\nType 5 for Coder\n");
+	System.out.print("\nChoose your class:\n Type 1 for Warrior \nType 2 for Mage\nType 3 for Archer\nType 4 for Rogue\nType 5 for Coder\n");
 	try { //used mr.browns way of getting an input to let user choose the class
 	    choice = in.readLine();
 	}
@@ -100,6 +98,9 @@ public class YoRPG
 	else if ( choice.equals("5")){
 	    pat = new Coder( name );
 	}
+	System.out.print(pat.graphics());
+	System.out.print(pat.about());
+
 
     }//end newGame()
 
@@ -121,13 +122,16 @@ public class YoRPG
 	    System.out.println( "\nLo, yonder monster approacheth!" );
 
 	    smaug = new Monster();
-
+	    System.out.println(smaug.graphics());
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
 		// Give user the option of using a special attack:
 		// If you land a hit, you incur greater damage,
 		// ...but if you get hit, you take more damage.
 		try {
+		    System.out.println("Monster:"+smaug.getstats());
+		    System.out.println(name +":"+ pat.getstats());
+
 		    System.out.println( "\nDo you feel lucky?" );
 		    System.out.println( "\t1: Nay.\n\t2: Aye!" );
 		    i = Integer.parseInt( in.readLine() );
@@ -142,10 +146,10 @@ public class YoRPG
 		d1 = pat.attack( smaug );
 		d2 = smaug.attack( pat );
 
-		System.out.println( "\n" + pat.getName() + " dealt " + d1 +
+		System.out.println( "\n" + name + " dealt " + d1 +
 				    " points of damage.");
 
-		System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
+		System.out.println( "\n" + "Ye Olde Monster smacked " + name +
 				    " for " + d2 + " points of damage.");
 	    }//end while
 

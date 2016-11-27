@@ -1,7 +1,7 @@
 /* Ishtiaque Mahdi, Allard Peng, David Frid (Team DragonBorns)
 APCS1 pd 3
-HW 32 -- Ye Olde Role Playing Game, Expanded
-2016 - 11 - 20
+HW 35 -- Ye Olde Role Playing Game, Realized
+2016 - 11 - 27
 */
 public class Monster extends Character{
     
@@ -19,5 +19,27 @@ public class Monster extends Character{
     }
     public  String about(){
 	return "Monster - is the enemey, nuff said - (Life = 150  Defense = 20  Attack = 1 Strength = random[45,60))";
+    }
+    public String graphics(){
+	String s = "";
+	s += "              ^I                                           I^\n";
+	s += "             ^II             ^               ^             II^\n";
+	s += "            ^ ^^^^          ^^               ^^          ^^^^ ^\n";
+	s += "           ^  I^  ^         I ^   ^     ^   ^ I         ^  ^I  ^\n"; 
+	s += "           ^  I^   ^        I ^   ^     ^   ^ I         ^  ^I  ^\n";
+	s += "          ^  ^  ^  ^         ^  ^^ ^---^ ^^  ^         ^  ^     ^\n";
+	s += "         ^  ^    I  ^         ^  ^^^   ^^^  ^         ^  I       ^\n";
+	s += "        ^  ^     ^   ^^^       ^ ( 0^ ^0 ) ^       ^^^   ^        ^\n";
+	s += "       ^  ^       ^     ^^^^    ^ ^^^I^^^ ^    ^^^^     ^^         ^\n";
+	s += "      ^  ^         ^^)      ^^^^ ^^-^I^-^^ ^^^^      (^^^ ^      ^  ^\n";
+	s += "     ^  ^           ^^^^)       ^^  oVo  ^^       (^^^   ^ ^      ^  ^\n";
+	s += "    ^  ^           ^,   ^^^)    (^^^ ^ ^^^)    (^^^         ^      ^  ^\n";
+	s += "   ^  '           ^^       ^^^)  (^^V^V^^)  (^^^                    ^  ^\n";
+	s += "  ^  '  '        ^'           ^   I(^^^)I   ^         ^              ^  ^\n";
+	s += " ^  '  ^        ^              ^^ I(^^^)I ^^^          ^              ^  ^\n";
+	s += "^     ^        '       ^        ^^(^^^^^)^^  ^          ^    ^         ^  ^\n";
+	s += "     ^                ,         ^(^^^^^^^)^   ^          ^    ^         ^\n";
+	s += "                     ^         ^(^^^^^^^^^)^   ^          ^    ^\n";
+	return s;
     }
 }

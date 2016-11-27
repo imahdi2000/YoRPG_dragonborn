@@ -1,7 +1,7 @@
 /* Ishtiaque Mahdi, Allard Peng, David Frid (Team DragonBorns)
 APCS1 pd 3
-HW 32 -- Ye Olde Role Playing Game, Expanded
-2016 - 11 - 20
+HW 35 -- Ye Olde Role Playing Game, Realized
+2016 - 11 - 27
 */
 public abstract class Character{
     protected int life;
@@ -50,11 +50,17 @@ public abstract class Character{
     public String getName(){
 	return "unknown";
     }
-    
+    public String getstats(){
+	String nlife;
+	String ndefense;
+	nlife = Integer.toString(life);
+	ndefense = Integer.toString(defense);
+	return "Heath: "+nlife+"  Defense:  "+ ndefense+"\n"; 
+    }
     public  abstract  String about();
     public abstract void normalize();
     public abstract  void specialize();
-
+    public abstract String graphics();
 
 
     /*

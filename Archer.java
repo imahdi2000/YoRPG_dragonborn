@@ -1,7 +1,7 @@
 /* Ishtiaque Mahdi, Allard Peng, David Frid (Team DragonBorns)
 APCS1 pd 3
-HW 32 -- Ye Olde Role Playing Game, Expanded
-2016 - 11 - 20
+HW 35 -- Ye Olde Role Playing Game, Realized
+2016 - 11 - 27
 */
 
 public class Archer extends Character{
@@ -34,6 +34,50 @@ public class Archer extends Character{
     }
     public  String about(){
 	return "Archer - Robin Hood Y'all - (Life = 110  Defense = 15  Attack = .5 Strength = 100)";
+    }
+    public String graphics(){
+	String s = "";
+	s +="                                                   	~.\n";
+	s +="                                                          ~|.\n";
+	s +="                                                      ~  `|.\n";
+	s +="                                                     ~     |.\n";
+	s +="                                                  ~       |.\n";
+	s +="                                                ~         `|.\n";
+	s +="                                             ~            |.\n";
+	s +="                                             ~              |.\n";
+	s +="                                         ~                |.\n";
+	s +="      __                                 ~                  `|.\n";
+	s +="     -~                              ~                     |.\n";
+	s +="        ~~                          ~                       |. \n";
+	s +="          ~~                      ~                         |.\n";
+	s +="           ~|                   ~                           |~\n";
+	s +="             ~#####~          ~                             ||\n";
+	s +="         ==###########>     ~                               ||\n";
+	s +="          ~##==      ~    ~                                 ||\n";
+	s +="      ______ =       =|__~___                                ||\n";
+	s +="  ,--' ,----`-,__ ___~'  --,-`-==============================##==========>\n";
+	s +=" ~               '        ##_______ ______   ______,--,____,=##,__\n";
+	s +=" `,    __==    ___,-,__,--'#'  ==='      `-'              | ##,-~\n";
+	s +="   `-,____,---'       ~####~              |        ____,--~_##,~\n";
+	s +="       #_              |##   ~  _____,---==,__,---'         ##\n";
+	s +="        #              ]===--==~                            ||\n";
+	s +="        #,             ]         ~                          ||\n";
+	s +="         #_            |           ~                        ||\n";
+	s +="           ##_       __~'             ~                      ||\n";
+	s +="            ####='     |                ~                    |~\n";
+	s +="            ###       |                  ~                  |.\n";
+	s +="            ##       _'                    ~                |.\n";
+	s +="           ###=======]                       ~              |.\n";
+	s +="           ~~~        |                         ~           ,|.\n";
+	s +="           ~~         |                           ~         |.\n";
+	s +="                                                    ~      ,|.\n";
+	s +="                                                      ~    |.\n";
+	s +="                                                        ~  |.\n";
+	s +="                                                          ~|.\n";
+	s +="                                                          ~.\n";
+	s +="                                                         |\n";
+	return s;
+
     }
 }
     

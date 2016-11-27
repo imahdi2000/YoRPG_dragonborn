@@ -1,7 +1,7 @@
 /* Ishtiaque Mahdi, Allard Peng, David Frid (Team DragonBorns)
 APCS1 pd 3
-HW 32 -- Ye Olde Role Playing Game, Expanded
-2016 - 11 - 20
+HW 35 -- Ye Olde Role Playing Game, Realized
+2016 - 11 - 27
 */
 public class Mage extends Character{
     private String name;
@@ -31,6 +31,41 @@ public class Mage extends Character{
     }
     public String about(){
 	return "Mage - Pew Pew Zap - (Life = 110  Defense = 35  Attack = .4 Strength = 75)";
+    }
+    public String graphics(){
+	String s ="";
+	s += "YOUR A WIZARD!!!\n";
+	s +="o \n";
+	s +="                   O       /`-._\n";
+	s +="                          /  ^·'^|\n";
+	s +="             o           T    l  *\n";
+	s +="                        _|-..-|_\n";
+	s +="                 O    (^ '----' `)\n";
+	s +="                       `^-....-/^\n";
+	s +="             O       o  ) O/ O (\n";
+	s +="                       _( (-)  )\n";
+	s +="                   O  /^ )    (  /^\n";
+	s +="                     /  ^(    ) |  ^\n";
+	s +="                 o  o    ^)  ( /    ^\n";
+	s +="                   /     |(  )|      ^\n";
+	s +="                  /    o ^ ^( /       ^\n";
+	s +="            __.--'   O    ^_ /   .._   ^\n";
+	s +="           /||)^      ,   (_)   /(((^^)'^\n";
+	s +="              |       | O         )  `  |\n";
+	s +="              |      / o___      /      /\n";
+	s +="             /  _.-''^^__O_^^''-._     /\n";
+	s +="           .'  /  -''^^    ^^''-  ^--'^\n";
+	s +="         .'   .`.  `'''----'''^  .`. ^\n";
+	s +="       .'    /   `'--..____..--'^   ^ ^\n";
+	s +="      /  _.-/                        ^ ^\n";
+	s +="  .::'_/^   |                        |  `.\n";
+	s +="         .-'|                        |    `-.\n";
+	s +="   _.--'`   ^                        /       `-.\n";
+	s +="  /          ^                      /           `-._\n";
+	s +="  `'---..__   `.                  .´_.._   __       ^\n";
+	s +="           ``'''`.              .'gnv   `'^  `''---'^\n";
+	s +="                  `-..______..-'\n";
+	return s;
     }
 
 }

@@ -1,7 +1,7 @@
 /* Ishtiaque Mahdi, Allard Peng, David Frid (Team DragonBorns)
 APCS1 pd 3
-HW 32 -- Ye Olde Role Playing Game, Expanded
-2016 - 11 - 20
+HW 35 -- Ye Olde Role Playing Game, Realized
+2016 - 11 - 27
 */
 
 public class Warrior extends Character{
@@ -32,5 +32,34 @@ public class Warrior extends Character{
     }
     public  String about(){
 	return " Warrior - Strong and Mighty - (Life = 125  Defense = 20  Attack = .4 Strength = 100 )";
+    }
+    public String graphics(){
+	String s = "";
+	s +="	                       ,dM\n";
+s +="                         dMMP\n";
+s +="                        dMMM'\n";
+s +="                        OMM/\n";
+s +="                        dMMm.\n";
+s +="                       dMMP'_O---.\n";
+s +="                      _| _  _ ;88;`\n";
+s +="                    ,db; _ >  ;8P|  `.\n";
+s +="                   (``T8b,__,'dP |   |\n";
+s +="                   |   `Y8b..dP  ;_  |\n";
+s +="                   |    |`T88P_ /  `O;\n";
+s +="                   :_.-~|d8P'`Y/    / \n";
+s +="                    O_   TP    ;   7`O\n";
+s +="         ,,__        >   `._  /'  /   `O_\n";
+s +="         `._ ~~~~~~~------|`O;' ;     ,'\n";
+s +="            ~~~-----~~~'O__(|;' _.-'  `O\n";
+s +="                    ;--..._     .-'-._     \n";
+s +="                   /      /`~~'   ,'`O_ ,/\n";
+s +="                  ;_    /'        /    ,/\n";
+s +="                  | `~-l         ;    /\n";
+s +="                  `O    ;       /O.._|\n";
+s +="                    O    O      O     O\n";
+s +="                    /`---';      `----'\n";
+s +="                   (     /            \n";
+s +="                    `---'\n";
+return s;
     }
 }

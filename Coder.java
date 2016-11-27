@@ -1,7 +1,7 @@
 /* Ishtiaque Mahdi, Allard Peng, David Frid (Team DragonBorns)
 APCS1 pd 3
-HW 32 -- Ye Olde Role Playing Game, Expanded
-2016 - 11 - 20
+HW 35 -- Ye Olde Role Playing Game, Realized
+2016 - 11 - 27
 */
 
 public class Coder extends Character{
@@ -34,6 +34,33 @@ public class Coder extends Character{
     }
     public  String about(){
 	return "Coder - HACKERMAN - (Life = 999  Defense = 999  Attack = 999 Strength = 999)";
+    }
+    public String graphics(){
+	String s = "";
+	s +="                                           , ,\n";
+s +="                                          ,','\n";
+s +="                                         + +\n";
+s +="                                         `.`.\n";
+s +="                                           ) +\n";
+s +="                                      ,,,-','\n";
+s +="                       _____,,,,---''~,,,-'\n";
+s +="             ___,,--'~~_____,,,,--''~~\n";
+s +="     __,,--'~__,,--'~~~\n";
+s +="  ,-~_,,--'~~\n";
+s +=" + ,'               .,------,....___\n";
+s +=" + +               /       +        ~~~`---.._\n";
+s +=" `.``-.._____,,,,,/       +                   ~~``.\n";
+s +="   ``--...___++++/-~~~~~-+                         /\n";
+s +="             ```+        +                         ++\n";
+s +="               +        +                         / +\n";
+s +="              +~----....+___                     + ++\n";
+s +="              +-,,,,,___    ~~`~--..._         ,' + +\n";
+s +="              +         ~~~~``---...__~~-...,-' ,'  +\n";
+s +="              +                       ~`-....,-'   /\n";
+s +="              `-._     _-------_                 ,'\n";
+s +="                  ~`--'~~~~~~~~~``--..        ,,'\n";
+s +="                                      ~~`---'~\n";
+	return s;
     }
     
 }
