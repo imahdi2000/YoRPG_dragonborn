@@ -16,6 +16,7 @@ public abstract class Character{
 	strength = 0;
 	defense = 0;
 	attack = 0.0;
+	potions = 3;
     } 
     public boolean isAlive(){
 	return life > 0;//returns either true or false
