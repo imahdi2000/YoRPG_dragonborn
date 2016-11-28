@@ -143,7 +143,7 @@ public class YoRPG
 		    System.out.println(name +":"+ pat.getstats());
 
 		    System.out.println( "\nDo you feel lucky?" );
-		    System.out.println( "\t1: Nay.\n\t2: Aye!" );
+		    System.out.println( "\t1: Nay.\n\t2: Aye!\n\t3: Maybe a Potion?" );
 		    i = Integer.parseInt( in.readLine() );
 		}
 		catch ( IOException e ) { }
@@ -154,15 +154,27 @@ public class YoRPG
 		    if ((pat.getType()).equals("Mage")) onFire = true;
 		    if ((pat.getType()).equals("Warrior")) dizzy = true;
 		    if ((pat.getType()).equals("Rogue")) disarmed = true;
+	            d1 = pat.attack( smaug );
+ 		    d2 = smaug.attack( pat );
+		    System.out.println( "\n" + name + " dealt " + d1 + " points of damage.");
+		}
+		else if(i == 1){
+		    pat.normalize();
+		    d1 = pat.attack( smaug );
+ 		    d2 = smaug.attack( pat );
+		    System.out.println( "\n" + name + " dealt " + d1 + " points of damage.");
 		}
 		else{
-		    pat.normalize();
+		    if(potions > 0){
+			pat.usePotion();
+			System.out.println(name + " now has " + life + " health.");
+		    }
+		    else{
+			System.out.println("You have no more potions!");    
+		    }
 		}
 
-		d1 = pat.attack( smaug );
-		d2 = smaug.attack( pat );
-
-		System.out.println( "\n" + name + " dealt " + d1 + " points of damage.");
+ 
 //
 		if (poisoned == true){
 		    smaug.directEffect(10, 0.0);
