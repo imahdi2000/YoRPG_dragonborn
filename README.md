@@ -9,7 +9,7 @@ What was added:
 
 3. Health potions: player can now choose to drink potions to boost health.
 
-4. Stats bar: Life, attack rating, defense, and strength are all displayed after each turn. 
+4. Stats bar: Life and defesne displayed after each turn. 
 
 ISH - I added Graphics to make it MORE AWESOME!!!
     : I found ASCII art online that I used to add the graphics, I had to modfify almost all of them becuase java wouldn't accept certain characters like semicolons, or backslashes in strings. In addtion, I had to seperate it line by line becuase I got an error "illegal start of expression" whenever I did that.
