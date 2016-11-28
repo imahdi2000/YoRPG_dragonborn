@@ -8,9 +8,9 @@ public abstract class Character{
     protected int strength;
     protected int defense;
     protected double attack;
-    protected  int count;//to count how many times specialize is used
-
-    
+    protected int count;//to count how many times specialize is used
+    protected int potions;
+	
     public Character(){
 	life = 0;
 	strength = 0;
@@ -62,6 +62,12 @@ public abstract class Character{
 	nlife = Integer.toString(life);
 	ndefense = Integer.toString(defense);
 	return "Heath: "+nlife+"  Defense:  "+ ndefense+"\n"; 
+    }
+    public void usePotion{
+	if(potions > 0){
+	    life += 10;
+            potions -= 1;
+	}
     }
     public abstract String about();
     public abstract void normalize();
